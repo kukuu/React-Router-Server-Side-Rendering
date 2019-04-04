@@ -44,7 +44,7 @@ class Grid extends Component {
     const { loading, repos } = this.state
 
     if (loading === true) {
-      return <p>LOADING</p>
+      return <p>LOADING! Please wait --) </p>
     }
 
     return (
