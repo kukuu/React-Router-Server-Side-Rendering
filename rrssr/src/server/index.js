@@ -21,7 +21,7 @@ app.get("*", (req, res, next) => {
 
   promise.then((data) => {
     const context = { data }
-
+//Magic takes place here with renderToString()
     const markup = renderToString(
       <StaticRouter location={req.url} context={context}>
         <App />
