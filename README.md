@@ -23,6 +23,8 @@ Free progressive enhancements - as the DOM elements are still made available fro
 ### Note 
 Evaluate your project to a conclusion, and  to estimate if the complexities in making your application Universal is worth the benefit in the end. From the points made above.
 
+SEO compatible isomorphic applications can be achieved these days using static geneators like Gatsby - https://github.com/kukuu/GatsbyJS/tree/master, and other middlewares including NextJS - https://github.com/kukuu/siliconlabs/tree/master/nextrematch .
+
 
 
 
