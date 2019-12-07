@@ -13,15 +13,18 @@ app.use(cors())
 app.use(express.static("public"))
 
 app.get("*", (req, res, next) => {
+  
+  //build instance route
   const activeRoute = routes.find((route) => matchPath(req.url, route)) || {}
 
+  //cache initial data on instance route: Initial request data or on Promise(). Using ternary operator
   const promise = activeRoute.fetchInitialData
     ? activeRoute.fetchInitialData(req.path)
     : Promise.resolve()
-
+//resolving promise
   promise.then((data) => {
-    const context = { data }
-//Magic takes place here with renderToString()
+    const context = { data } //pass context as prop to StaticRouter
+//Magic takes place here with renderToString(). markup is injected into res.send()
     const markup = renderToString(
       <StaticRouter location={req.url} context={context}>
         <App />
