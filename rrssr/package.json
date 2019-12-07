@@ -8,7 +8,7 @@
   },
   "author": "Alexander Adu-Sarkodie",
   "license": "MIT",
-  "description": "",
+  "description": "Server Side Rendering - Isomorphic JavaScript",
   "babel": {
     "presets": [
       "env",
