@@ -2,6 +2,7 @@ import Home from './Home'
 import Grid from './Grid'
 import { fetchPopularRepos } from './api'
 
+// Defined roots for root and unique categories by IDs
 const routes =  [
   {
     path: '/',
